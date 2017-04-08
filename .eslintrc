@@ -9,11 +9,8 @@
       "__DEV__": false,
     },
     "rules": {
-      "global-require": ["off"],
       "arrow-parens": ["error", "always"],
-      "no-param-reassign": ["error", { "props": false }],
-      "class-methods-use-this": ["off"],
-      "no-underscore-dangle": ["off"],
-      "comma-dangle": ["error", {"functions": "never"}]
+      "comma-dangle": ["error", {"functions": "never"}],
+      "no-confusing-arrow": ["error", {"allowParens": true}]
     },
 }
