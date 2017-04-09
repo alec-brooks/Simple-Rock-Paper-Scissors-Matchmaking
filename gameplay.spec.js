@@ -21,18 +21,18 @@ describe('gameplay', () => {
     it('should a single merged record when present two', () => {
       expect(getRounds(throws)).to.eql([{
         throws,
-        winner: 'a'
+        winner: 'b'
       }]);
     });
 
     it('should two merged record when presented with four throws', () => {
       expect(getRounds([...throws, ...throws])).to.eql([{
         throws,
-        winner: 'a'
+        winner: 'b'
       },
       {
         throws,
-        winner: 'a'
+        winner: 'b'
       }]);
     });
   });

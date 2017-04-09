@@ -14,7 +14,7 @@ const appRouter = (app) => {
 
   app.get('/', (req, res) => res.send('Hello World'));
   app.get('/throws', (req, res) => res.send(throws));
-  app.post('/rps', getRounds(throws, choices));
+  app.get('/rps', getRounds(throws, choices));
   app.post('/rps', attemptToThrow(throws, choices));
 };
 
