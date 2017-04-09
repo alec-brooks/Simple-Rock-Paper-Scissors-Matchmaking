@@ -9,10 +9,24 @@ const matchAgainstPreviousThrow = (result, thr) => {
     newRound
   ];
 };
+
+const determineRPSWinner = (a, b) => {
+  if (a.throw === b.throw) {
+    return '';
+  }
+  if (
+    (a.throw === 'rock' && b.throw === 'scissors')
+    || (a.throw === 'scissors' && b.throw === 'paper')
+    || (a.throw === 'paper' && b.throw === 'rock')
+  ) {
+    return a.name;
+  }
+  return b.name;
+};
 const getRounds = (throws) => throws.reduce(
   (r, t, i) => (i % 2
     ? matchAgainstPreviousThrow(r, t)
     : addNewRound(r, t)), []
 );
 
-module.exports = { getRounds };
+module.exports = { getRounds, determineRPSWinner };
