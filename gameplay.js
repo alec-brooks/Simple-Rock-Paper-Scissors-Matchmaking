@@ -2,13 +2,13 @@ const addNewRound = (result, thr) =>
   [...result, { throws: [thr] }];
 
 const determineRPSWinner = (a, b) => {
-  if (a.throw === b.throw) {
+  if (a.choice === b.choice) {
     return '';
   }
   if (
-      (a.throw === 'rock' && b.throw === 'scissors')
-      || (a.throw === 'scissors' && b.throw === 'paper')
-      || (a.throw === 'paper' && b.throw === 'rock')
+      (a.choice === 'rock' && b.choice === 'scissors')
+      || (a.choice === 'scissors' && b.choice === 'paper')
+      || (a.choice === 'paper' && b.choice === 'rock')
     ) {
     return a.name;
   }
